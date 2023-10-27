@@ -18,6 +18,7 @@ import javax.crypto.spec.SecretKeySpec;
  * @author j.domenech
  */
 public class Funciones {
+    public static SecretKey hashedString;
     public static Scanner pro= new Scanner(System.in);
     public static SecretKey hashString(String contrasenya) {
         try {

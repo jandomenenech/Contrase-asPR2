@@ -15,14 +15,14 @@
     </head>
     <body>
         <div class="container">
-            <h2 class="text-center mt-5">Guardar Contraseña</h2>
+            <h2 class="text-center mt-5">Iniciar Sesión</h2>
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <form class="mt-5" action="" method="post">
                         <div class="form-group">
-                            <label for="username">Usuario (opcional)</label>
-                            <input type="text" class="form-control" id="username" placeholder="Usuario">
+                            <label for="username">Usuario</label>
+                            <input type="text" name = "username" class="form-control" id="username" placeholder="Usuario">
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
@@ -35,14 +35,14 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Agrega el atributo name aquí -->
-                        <button type="submit" name="submit" class="btn btn-primary btn-block">Guardar</button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-block">Inciar Sesion</button>
                         <%String password = "Hola",email="";
                             if (request.getParameter("submit") != null) {
                                 password = request.getParameter("password");
+                                email = request.getParameter("username");
                                 
-                                if (password.equals("R&2$KwP!8@vS6nTz")) {
-                                         SecretKey hashedString=Funciones.hashString(password);
+                                if (password.equals("R&2$KwP!8@vS6nTz")&&email.equals("j.camara@ceroca.cat")){
+                                          Funciones.hashedString=Funciones.hashString(password);
                                     }
                                     else{
                                     %><p>Esto no puede ser putita</p><%
